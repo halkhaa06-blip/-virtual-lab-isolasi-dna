@@ -1,0 +1,8 @@
+{
+  "name": "Game Virtual Lab Isolasi DNA Bawang Bombai",
+  "description": "Game simulasi virtual lab biologi molekuler isolasi DNA Allium cepa dengan eksplorasi laboratorium 3D dan praktikum 2D interaktif sentrifugasi serta spektrofotometri UV-Vis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

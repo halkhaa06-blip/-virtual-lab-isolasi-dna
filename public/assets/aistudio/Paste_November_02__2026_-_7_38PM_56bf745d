@@ -1,0 +1,865 @@
+# PROMPT PENGEMBANGAN GAME VIRTUAL LAB ISOLASI DNA BAWANG BOMBAI
+
+**Judul: Game Virtual Lab Isolasi DNA Bawang Bombai Menggunakan Sentrifugasi dan Spektrofotometri UV-Vis**
+
+Buatlah aplikasi pembelajaran Biologi berbasis game interaktif yang menyimulasikan praktikum isolasi DNA dari bawang bombai (*Allium cepa*) hingga pengukuran konsentrasi dan kemurnian DNA menggunakan spektrofotometer UV-Vis.
+
+Aplikasi harus menggabungkan dua jenis tampilan:
+
+1. **Tampilan awal 3D:** Berupa lingkungan laboratorium virtual seperti game, dengan tiga meja praktikum yang ditempatkan mengelilingi seorang praktikan.
+2. **Tampilan praktikum 2D:** Muncul ketika praktikan mendekati dan memilih meja. Pada tampilan ini, seluruh kegiatan praktikum dilakukan menggunakan alat-alat laboratorium 2D yang realistis dan interaktif.
+
+Aplikasi harus benar-benar dapat dimainkan, bukan sekadar gambar, animasi dekoratif, atau mockup.
+
+# 1. KONSEP UTAMA GAME
+
+Buat lingkungan laboratorium virtual dengan perspektif seperti permainan simulasi laboratorium.
+
+Pada tampilan awal, terdapat seorang praktikan yang berdiri di bagian tengah ruangan. Di sekelilingnya terdapat tiga meja praktikum.
+
+**Susunan meja laboratorium:**
+
+- Meja 1 berada di sebelah kiri praktikan.
+- Meja 2 berada di sebelah kanan praktikan.
+- Meja 3 berada di bagian depan praktikan.
+
+Ketiga meja harus terlihat jelas dan memiliki jarak yang cukup agar tidak bertumpuk.
+
+<IMAGE_PLACEHOLDER>
+Gambaran konsep: laboratorium 3D dengan praktikan di tengah dan tiga meja praktikum mengelilinginya.
+</IMAGE_PLACEHOLDER>
+
+Setiap meja memiliki identitas berupa tulisan kecil:
+
+- MEJA 1 — PERSIAPAN DAN EKSTRAKSI DNA
+- MEJA 2 — SENTRIFUGASI DAN PEMISAHAN DNA
+- MEJA 3 — SPEKTROFOTOMETRI UV-VIS
+
+**Karakteristik tampilan awal:**
+
+- Lingkungan laboratorium menggunakan model 3D.
+- Praktikan berada di tengah ruangan.
+- Ketiga meja memiliki bentuk fisik yang realistis.
+- Alat-alat pada meja dapat terlihat dari tampilan awal.
+- Gunakan pencahayaan laboratorium yang natural.
+- Gunakan warna putih, biru muda, biru tua, dan aksen oranye.
+- Buat tampilan seperti game simulasi laboratorium profesional.
+- Hindari karakter kartun, emoji, dan dekorasi berlebihan.
+
+# 2. KARAKTER PRAKTIKAN DAN SISTEM PERGERAKAN
+
+Tampilkan seorang praktikan menggunakan jas laboratorium yang berdiri di tengah ruangan.
+
+Praktikan harus dapat bergerak menuju ketiga meja.
+
+**Sistem kontrol:**
+
+- Pada laptop, gunakan tombol W, A, S, D atau tombol arah untuk menggerakkan praktikan.
+- Pada HP, gunakan joystick virtual pada layar.
+- Kamera mengikuti pergerakan praktikan.
+- Praktikan dapat berjalan mendekati meja.
+- Ketika berada di dekat meja, muncul tombol INTERAKSI atau MULAI PRAKTIKUM.
+- Ketika tombol ditekan, kamera berpindah menuju tampilan praktikum meja tersebut.
+
+Gerakan praktikan harus halus dan responsif.
+
+# 3. SISTEM PENGUNCIAN TIGA MEJA
+
+Ketiga meja memiliki sistem akses bertahap.
+
+**Tahap pertama — Meja 1**
+
+<badge color="success">TERBUKA</badge>
+
+Praktikan dapat langsung berjalan menuju Meja 1.
+
+Ketika praktikan mendekati Meja 1, tampilkan tombol:
+
+**MULAI PRAKTIKUM**
+
+Setelah ditekan, masuk ke tampilan praktikum 2D Meja 1.
+
+**Tahap kedua — Meja 2**
+
+<badge color="warning">TERKUNCI</badge>
+
+Meja 2 hanya dapat dibuka setelah seluruh tahapan Meja 1 diselesaikan.
+
+**Tahap ketiga — Meja 3**
+
+<badge color="warning">TERKUNCI</badge>
+
+Meja 3 hanya dapat dibuka setelah seluruh tahapan Meja 2 diselesaikan.
+
+Setelah praktikan menyelesaikan satu meja, tampilkan tombol:
+
+**LANJUT KE MEJA BERIKUTNYA**
+
+Praktikan kembali ke lingkungan game 3D dan dapat berjalan menuju meja selanjutnya.
+
+Jangan membuka ketiga meja sekaligus sejak awal.
+
+Pastikan sistem penguncian terhubung dengan status penyelesaian praktikum, bukan hanya berdasarkan tombol yang ditekan.
+
+# 4. TAMPILAN PRAKTIKUM 2D
+
+Ketika praktikan memilih salah satu meja, tampilkan lingkungan praktikum 2D.
+
+Tampilan 2D harus memiliki:
+
+- Perspektif meja laboratorium dari depan sedikit menyerupai fotografi laboratorium.
+- Objek alat dengan bentuk fisik realistis.
+- Resolusi HD.
+- Detail material dan bayangan yang natural.
+- Area kerja luas.
+- Objek dapat dipindahkan menggunakan mouse dan layar sentuh.
+- Animasi perubahan sampel yang mengikuti tindakan praktikan.
+
+Gunakan tampilan responsif untuk laptop dan HP.
+
+Susun alat secara rapi dan proporsional. Jangan menumpuk alat, jangan membuat objek saling menutupi, dan jangan membuat alat terlalu kecil.
+
+Objek yang sedang digunakan harus menjadi pusat perhatian.
+
+Sediakan tombol kecil:
+- Kembali ke Laboratorium.
+- Petunjuk.
+- Reset Praktikum.
+
+# 5. MEJA 1 — PERSIAPAN DAN EKSTRAKSI DNA BAWANG BOMBAI
+
+<badge color="success">TAHAP 1</badge>
+
+<IMAGE_PLACEHOLDER>
+Gambaran meja 1: bawang bombai, papan potong, pisau, timbangan digital, mortar, alu, gelas beker, larutan ekstraksi, pipet, corong, dan kertas saring.
+</IMAGE_PLACEHOLDER>
+
+Meja 1 merupakan tempat praktikan melakukan persiapan jaringan bawang, penghancuran, ekstraksi, dan penyaringan.
+
+**Alat dan bahan yang tersedia:**
+
+- Bawang bombai.
+- Papan potong.
+- Pisau.
+- Timbangan digital.
+- Mortar dan alu.
+- Gelas beker.
+- Gelas ukur.
+- Pipet.
+- Batang pengaduk.
+- Botol larutan ekstraksi (buffer lisis).
+- Corong.
+- Kertas saring.
+- Wadah penampung filtrat.
+
+**Tahapan interaksi:**
+
+A. Pemotongan bawang bombai
+
+- Tampilkan bawang bombai utuh di atas papan potong.
+- Praktikan dapat menggerakkan pisau untuk memotong bawang.
+- Bagian bawang yang dipotong berubah menjadi potongan kecil atau butiran jaringan.
+- Bagian yang belum dipotong tetap utuh.
+- Potongan bawang dapat digeser dan dipindahkan ke timbangan.
+
+B. Penimbangan bawang
+
+- Tempatkan timbangan digital di bagian tengah area kerja.
+- Praktikan dapat memindahkan potongan bawang ke atas timbangan.
+- Angka massa berubah secara otomatis mengikuti jumlah jaringan yang diletakkan.
+- Praktikan bebas menentukan massa bawang yang digunakan.
+- Catat massa aktual sebagai data praktikum.
+
+C. Penghancuran jaringan
+
+- Praktikan memindahkan bawang ke mortar.
+- Gunakan alu untuk menghancurkan jaringan.
+- Gerakan tumbukan harus mengikuti gerakan mouse atau jari.
+- Setiap tumbukan menyebabkan jaringan berubah menjadi semakin halus.
+- Jumlah tumbukan dihitung otomatis berdasarkan interaksi praktikan.
+- Waktu penghancuran dihitung berdasarkan waktu aktual kegiatan.
+
+D. Penambahan larutan ekstraksi
+
+- Praktikan mengambil botol bertuliskan **Larutan Ekstraksi (Buffer Lisis)**.
+- Tutup botol dapat dibuka dan ditutup.
+- Praktikan mengambil cairan menggunakan pipet.
+- Cairan dituangkan ke dalam mortar atau gelas beker sesuai urutan simulasi.
+- Ketika wadah dimiringkan, cairan harus terlihat mengalir keluar.
+- Volume cairan bertambah sesuai jumlah cairan yang dipindahkan.
+
+E. Pengadukan
+
+- Praktikan menggunakan batang pengaduk.
+- Gerakan pengadukan mengikuti gerakan mouse atau jari.
+- Warna dan tekstur campuran berubah secara bertahap selama pengadukan.
+- Jumlah pengadukan dihitung otomatis.
+- Waktu inkubasi dicatat berdasarkan waktu simulasi yang benar-benar berlangsung.
+
+F. Penyaringan
+
+- Praktikan memasang kertas saring pada corong.
+- Letakkan wadah penampung di bawah corong.
+- Tuangkan campuran ke dalam corong.
+- Cairan harus terlihat melewati kertas saring.
+- Ampas jaringan tertahan pada kertas saring.
+- Filtrat terkumpul dalam wadah penampung.
+- Volume ekstraksi dicatat berdasarkan volume filtrat aktual.
+
+Setelah seluruh tahapan selesai, tampilkan hasil filtrat dan tombol:
+
+**SELESAIKAN MEJA 1**
+
+Setelah ditekan, praktikan kembali ke tampilan game 3D dan Meja 2 terbuka.
+
+# 6. MEJA 2 — SENTRIFUGASI DAN PEMISAHAN DNA
+
+<badge color="warning">TAHAP 2</badge>
+
+<IMAGE_PLACEHOLDER>
+Gambaran meja 2: sentrifus laboratorium dengan tutup transparan, tabung sentrifus, pipet, rak tabung, dan botol buffer TE.
+</IMAGE_PLACEHOLDER>
+
+Meja 2 digunakan untuk proses pemisahan komponen sampel menggunakan sentrifugasi dan pemrosesan fraksi DNA.
+
+**Alat dan bahan:**
+
+- Sentrifus laboratorium.
+- Tabung sentrifus.
+- Rak tabung.
+- Pipet.
+- Botol etanol 95%.
+- Tabung penampung.
+- Botol buffer TE.
+
+**Tahapan interaksi:**
+
+A. Memasukkan sampel ke tabung sentrifus
+
+- Praktikan mengambil tabung sentrifus.
+- Tutup tabung harus dibuka terlebih dahulu sebelum cairan dimasukkan.
+- Praktikan mengambil ekstrak hasil penyaringan menggunakan pipet.
+- Pindahkan ekstrak ke tabung sentrifus.
+- Tutup tabung setelah pengisian.
+- Praktikan memasukkan tabung ke dalam rotor sentrifus secara seimbang.
+
+B. Penambahan etanol
+
+- Tampilkan botol etanol 95%.
+- Praktikan membuka tutup botol terlebih dahulu.
+- Praktikan mengambil etanol menggunakan pipet.
+- Cairan dipindahkan ke tabung sesuai prosedur simulasi.
+- Tutup botol etanol dapat dibuka dan ditutup secara interaktif.
+
+C. Pengoperasian sentrifus
+
+- Tampilkan sentrifus dengan bentuk realistis.
+- Tutup sentrifus sedikit transparan sehingga rotor dan pergerakan tabung dapat terlihat.
+- Praktikan dapat membuka dan menutup tutup sentrifus.
+- Tampilkan layar digital RPM dan timer.
+- Praktikan dapat mengatur parameter sesuai protokol simulasi.
+- Tombol START dapat ditekan untuk memulai sentrifugasi.
+- Ketika START ditekan, angka RPM meningkat sesuai proses percepatan.
+- Rotor berputar secara visual.
+- Tabung terlihat berputar di dalam sentrifus.
+- Timer berjalan selama proses berlangsung.
+- Kecepatan RPM bergerak mengikuti kondisi sentrifugasi.
+
+Sentrifus hanya dapat dijalankan ketika:
+- Tutup sentrifus tertutup.
+- Tabung telah terpasang dengan benar.
+- Posisi tabung seimbang.
+
+Setelah proses selesai, rotor melambat hingga berhenti.
+
+D. Pengamatan hasil sentrifugasi
+
+Setelah sentrifugasi selesai, praktikan dapat mengambil tabung dan mengamatinya.
+
+Tampilkan perubahan visual dalam tabung berupa:
+
+- Pelet atau endapan di bagian bawah tabung.
+- Supernatan di bagian atas tabung.
+- Perbedaan warna dan tekstur antara fraksi yang terbentuk.
+
+Jangan langsung menyatakan bahwa semua endapan merupakan DNA murni.
+
+E. Pemisahan DNA dan debris
+
+Setelah tabung diklik, tampilkan fitur zoom tabung.
+
+Perbesar tampilan tabung agar praktikan dapat mengidentifikasi:
+
+- Supernatan.
+- Pelet atau debris.
+- Posisi fraksi di dalam tabung.
+
+Tampilkan tombol:
+
+**NEXT — PEMISAHAN DNA**
+
+Setelah ditekan, tampilkan dua tabung terpisah dengan label:
+
+1. TABUNG DEBRIS.
+2. TABUNG DNA.
+
+Sediakan pipet untuk memindahkan cairan.
+
+- Praktikan mengambil supernatan menggunakan pipet.
+- Supernatan dipindahkan ke tabung DNA.
+- Sisa debris tetap berada pada tabung awal.
+- Perpindahan cairan harus terlihat secara visual.
+
+F. Penambahan buffer TE
+
+- Tampilkan botol buffer TE.
+- Praktikan membuka tutup botol.
+- Praktikan mengambil buffer TE menggunakan pipet.
+- Pindahkan buffer TE ke tabung yang berisi fraksi DNA.
+- Tutup botol buffer TE setelah digunakan.
+- Tutup tabung DNA.
+- Praktikan dapat menggoyangkan tabung sedikit untuk menghomogenkan larutan.
+- Tampilkan perubahan visual cairan ketika dihomogenkan.
+
+Catat hasil pemisahan dan parameter sentrifugasi.
+
+Setelah seluruh proses selesai, tampilkan tombol:
+
+**SELESAIKAN MEJA 2**
+
+Setelah ditekan, praktikan kembali ke lingkungan game 3D dan Meja 3 terbuka.
+
+# 7. MEJA 3 — SPEKTROFOTOMETRI UV-VIS
+
+<badge color="info">TAHAP 3</badge>
+
+<IMAGE_PLACEHOLDER>
+Gambaran meja 3: spektrofotometer UV-Vis realistis, layar digital, kompartemen kuvet, kuvet blanko, dan kuvet sampel DNA.
+</IMAGE_PLACEHOLDER>
+
+Meja 3 digunakan untuk mengukur absorbansi, konsentrasi, dan kemurnian DNA hasil isolasi.
+
+**Alat dan bahan:**
+
+- Spektrofotometer UV-Vis.
+- Kuvet yang sesuai untuk pengukuran UV.
+- Pipet.
+- Sampel DNA dalam buffer TE.
+- Larutan blanko berupa buffer TE.
+
+**Tahapan interaksi:**
+
+A. Persiapan instrumen
+
+- Tampilkan spektrofotometer berukuran besar.
+- Praktikan dapat menekan tombol daya.
+- Layar instrumen menyala.
+- Tampilkan pilihan panjang gelombang 260 nm dan 280 nm.
+- Kompartemen kuvet dapat dibuka dan ditutup.
+
+B. Pengukuran blanko
+
+- Praktikan mengambil kuvet.
+- Masukkan buffer TE ke dalam kuvet menggunakan pipet.
+- Masukkan kuvet ke dalam kompartemen spektrofotometer.
+- Tutup kompartemen.
+- Praktikan memilih panjang gelombang 260 nm.
+- Tekan tombol BLANK.
+- Instrumen melakukan pengaturan nol absorbansi.
+
+C. Pengukuran sampel DNA
+
+- Praktikan mengambil kuvet sampel.
+- Masukkan larutan DNA yang telah dicampur buffer TE.
+- Masukkan kuvet ke dalam spektrofotometer.
+- Tutup kompartemen.
+- Pilih panjang gelombang 260 nm.
+- Tekan tombol MEASURE.
+- Tampilkan nilai absorbansi A260 pada layar.
+- Selanjutnya pilih panjang gelombang 280 nm.
+- Tekan MEASURE kembali.
+- Tampilkan nilai absorbansi A280.
+
+Nilai absorbansi harus berasal dari parameter simulasi dan kondisi sampel yang telah dilakukan, bukan angka acak yang tidak berhubungan dengan proses praktikum.
+
+D. Analisis hasil
+
+Tampilkan hasil pengukuran berupa:
+
+- Absorbansi 260 nm.
+- Absorbansi 280 nm.
+- Rasio A260/A280.
+- Konsentrasi DNA.
+- Total DNA.
+- Interpretasi kemurnian DNA.
+
+Gunakan rumus:
+
+Konsentrasi DNA (µg/mL) = A260 × 50
+
+Rumus tersebut berlaku untuk DNA untai ganda dengan panjang lintasan optik 1 cm dan tanpa pengenceran tambahan.
+
+Konversikan konsentrasi ke ng/µL sesuai kebutuhan.
+
+Rasio kemurnian:
+
+A260/A280 = Absorbansi 260 nm ÷ Absorbansi 280 nm.
+
+Gunakan nilai sekitar 1,8 sebagai acuan umum kemurnian DNA. Jelaskan bahwa rasio tersebut merupakan indikator awal, bukan bukti mutlak kemurnian DNA.
+
+Total DNA dihitung berdasarkan konsentrasi dan volume akhir larutan DNA.
+
+Setelah selesai, tampilkan tombol:
+
+**SELESAIKAN PRAKTIKUM**
+
+# 8. SISTEM PENCATATAN HASIL PRAKTIKUM
+
+Semua data harus mengikuti tindakan yang dilakukan praktikan.
+
+Jangan menggunakan hasil praktikum yang sama untuk seluruh pengguna.
+
+Data yang dicatat meliputi:
+
+1. Massa bawang (g).
+2. Volume ekstraksi (mL).
+3. Jumlah penghancuran (kali).
+4. Waktu penghancuran (menit).
+5. Waktu inkubasi (menit).
+6. Kecepatan sentrifugasi (RPM).
+7. Waktu sentrifugasi (menit).
+8. Absorbansi 260 nm (A260).
+9. Absorbansi 280 nm (A280).
+10. Rasio A260/A280.
+11. Konsentrasi DNA (ng/µL).
+12. Total DNA (µg).
+13. Interpretasi kemurnian DNA.
+
+Hasil ditampilkan dalam tabel ringkas yang dapat dibuka setelah praktikum selesai.
+
+Sediakan tombol:
+- Simpan Hasil Praktikum.
+- Unduh Hasil dalam CSV.
+- Lihat Hasil Praktikum.
+
+Pastikan setiap hasil berasal dari aktivitas praktikan dan dapat diperbarui ketika praktikum diulang.
+
+# 9. SISTEM PEMBELAJARAN DAN PENGUNCIAN FITUR
+
+Selain game praktikum, sediakan fitur pembelajaran dengan urutan:
+
+1. Beranda.
+2. Tujuan Pembelajaran.
+3. Materi.
+4. Pretest.
+5. Game Virtual Lab.
+6. Posttest.
+7. Aktivitas.
+
+Sebelum identitas diisi, hanya Beranda yang dapat diakses.
+
+Setelah identitas disimpan, buka:
+- Tujuan Pembelajaran.
+- Materi.
+- Pretest.
+
+Setelah pretest selesai dan dikumpulkan, buka:
+- Game Virtual Lab.
+- Posttest.
+- Aktivitas.
+
+Simpan identitas peserta didik:
+- Nama lengkap.
+- Kelas.
+- Nomor absen.
+
+Gunakan identitas tersebut secara otomatis pada halaman Aktivitas.
+
+# 10. TUJUAN PEMBELAJARAN
+
+**Capaian Pembelajaran (CP) Fase F:**
+
+Menganalisis proses bioteknologi modern.
+
+**Tujuan Pembelajaran:**
+
+Setelah mengikuti pembelajaran melalui game virtual lab isolasi DNA, peserta didik diharapkan mampu:
+
+1. Mengidentifikasi alat dan bahan isolasi DNA.
+2. Menjelaskan fungsi alat dan bahan dalam isolasi DNA.
+3. Mengurutkan tahapan isolasi DNA.
+4. Menjelaskan prinsip lisis sel.
+5. Menjelaskan prinsip kerja sentrifugasi.
+6. Mengidentifikasi pelet dan supernatan.
+7. Menjelaskan prinsip spektrofotometri UV.
+8. Menentukan panjang gelombang pengukuran DNA.
+9. Menghitung konsentrasi DNA.
+10. Menginterpretasikan rasio A260/A280.
+11. Menganalisis hasil isolasi DNA.
+12. Mengevaluasi faktor yang memengaruhi kualitas DNA.
+
+# 11. MATERI PEMBELAJARAN
+
+Sediakan halaman materi dengan tujuh kelompok pembahasan berikut. Setiap submateri harus dijabarkan secara lengkap, sistematis, ilmiah, dan sesuai tingkat SMA Fase F.
+
+**A. Dasar-Dasar DNA dan Biologi Molekuler**
+
+- Pengertian DNA.
+- Struktur dan Komponen Penyusun DNA.
+- Basa Nitrogen pada DNA.
+- Fungsi DNA dalam Kehidupan.
+- DNA, Gen, dan Kromosom.
+- Lokasi DNA di dalam Sel.
+- Perbedaan DNA dan RNA.
+- Peran DNA dalam Bioteknologi.
+
+**B. Konsep Umum Isolasi DNA**
+
+- Pengertian Isolasi DNA.
+- Tujuan Isolasi DNA.
+- Prinsip Dasar Isolasi DNA.
+- Sumber DNA dari Berbagai Organisme.
+- Tahapan Umum Isolasi DNA.
+- Perbedaan Ekstraksi, Isolasi, dan Pemurnian DNA.
+- Faktor yang Memengaruhi Keberhasilan Isolasi DNA.
+- Kriteria DNA Hasil Isolasi yang Baik.
+- Penerapan Isolasi DNA dalam Biologi Molekuler dan Bioteknologi.
+
+**C. Larutan dan Reagen dalam Isolasi DNA**
+
+- Pengertian Larutan Ekstraksi atau Buffer Lisis.
+- Fungsi Buffer Lisis dalam Pelepasan DNA.
+- Komponen Buffer Lisis dan Fungsinya.
+- Fungsi Tris-HCl, EDTA, SDS, dan NaCl.
+- Pengertian dan Fungsi Etanol 95%.
+- Pengertian dan Fungsi Buffer TE.
+- Komponen Buffer TE, yaitu Tris dan EDTA.
+- Perbedaan Fungsi Buffer Lisis, Etanol, dan Buffer TE.
+- Prinsip Kerja Larutan dalam Isolasi DNA.
+- Urutan Penggunaan Larutan dalam Proses Isolasi DNA.
+
+**D. Sentrifugasi dalam Isolasi DNA**
+
+- Pengertian Sentrifugasi.
+- Prinsip Kerja Sentrifus.
+- Tujuan Sentrifugasi dalam Isolasi DNA.
+- Prinsip Pemisahan Berdasarkan Sifat Sedimentasi.
+- Pengertian RPM dan RCF.
+- Fungsi Rotor dan Tabung Sentrifus.
+- Pentingnya Keseimbangan Rotor.
+- Pengertian Pelet dan Supernatan.
+- Perbedaan Sentrifugasi Pemisahan Debris dan Pengumpulan DNA.
+- Faktor yang Memengaruhi Hasil Sentrifugasi.
+- Kesalahan yang Dapat Terjadi saat Sentrifugasi.
+- Hubungan Sentrifugasi dengan Pemurnian DNA.
+
+**E. Spektrofotometri UV untuk Analisis DNA**
+
+- Pengertian Spektrofotometri UV.
+- Prinsip Kerja Spektrofotometer.
+- Interaksi Cahaya UV dengan Molekul DNA.
+- Pengertian Panjang Gelombang atau Lambda (λ).
+- Pengertian Absorbansi.
+- Hubungan Absorbansi dan Konsentrasi DNA.
+- Alasan Pengukuran DNA pada 260 nm.
+- Alasan Pengukuran pada 280 nm.
+- Fungsi Blanko dalam Pengukuran.
+- Persiapan Sampel DNA.
+- Proses Pengukuran Sampel dengan Spektrofotometer.
+- Faktor yang Memengaruhi Akurasi Pengukuran.
+
+**F. Analisis Konsentrasi, Kemurnian, dan Kualitas DNA**
+
+- Pengertian Konsentrasi DNA.
+- Pengertian Total DNA.
+- Perbedaan Konsentrasi dan Total DNA.
+- Rumus Perhitungan Konsentrasi DNA.
+- Pengertian Kemurnian DNA.
+- Rasio A260/A280.
+- Acuan Umum Kemurnian DNA.
+- Interpretasi Nilai Absorbansi.
+- Interpretasi Konsentrasi DNA.
+- Interpretasi Rasio Kemurnian DNA.
+- Identifikasi Kemungkinan Kontaminasi.
+- Contoh Perhitungan Konsentrasi DNA.
+- Contoh Interpretasi Hasil Spektrofotometri.
+- Hubungan Konsentrasi, Kemurnian, dan Kualitas DNA.
+
+**G. Permasalahan dan Evaluasi Isolasi DNA**
+
+- Penyebab DNA Tidak Terlihat.
+- Penyebab Konsentrasi DNA Rendah.
+- Penyebab Kemurnian DNA Rendah.
+- Pengaruh Kontaminasi Protein, RNA, dan Senyawa Lain.
+- Pengaruh Sisa Deterjen dan Busa.
+- Kesalahan dalam Pemindahan Sampel.
+- Kesalahan dalam Proses Sentrifugasi.
+- Kesalahan dalam Pengukuran Spektrofotometri.
+- Faktor yang Memengaruhi Keberhasilan Isolasi DNA.
+- Kelebihan dan Kekurangan Metode Isolasi DNA.
+- Upaya Meningkatkan Kualitas Hasil Isolasi DNA.
+- Evaluasi Keberhasilan Isolasi DNA.
+
+Gunakan gambar struktur DNA, ilustrasi sel, diagram proses isolasi, ilustrasi pelet dan supernatan, serta gambar instrumen spektrofotometer yang relevan.
+
+Materi harus memiliki penjelasan, contoh, tabel, dan ilustrasi yang membantu pemahaman. Jangan hanya menampilkan daftar judul.
+
+# 12. PRETEST
+
+Buat lima soal pilihan ganda berikut.
+
+1. Apa yang dimaksud dengan DNA?
+
+A. Materi genetik yang menyimpan informasi genetik.
+B. Zat yang menghasilkan energi.
+C. Bagian sel yang mencerna makanan.
+D. Zat yang mengangkut oksigen.
+
+2. Apa tujuan isolasi DNA?
+
+A. Menghancurkan seluruh isi sel.
+B. Memisahkan DNA dari komponen sel lainnya.
+C. Mengubah DNA menjadi protein.
+D. Memperbanyak jumlah sel.
+
+3. Apa fungsi alat sentrifugasi dalam isolasi DNA?
+
+A. Mengukur suhu sampel.
+B. Mengamati bentuk DNA.
+C. Memisahkan komponen sampel melalui pemutaran berkecepatan tinggi.
+D. Mengukur konsentrasi DNA.
+
+4. Apa fungsi spektrofotometer dalam analisis DNA?
+
+A. Menghancurkan jaringan.
+B. Memisahkan komponen sel.
+C. Memperbanyak DNA.
+D. Mengukur penyerapan cahaya oleh sampel.
+
+5. Mengapa DNA perlu dianalisis setelah proses isolasi?
+
+A. Untuk mengetahui konsentrasi dan kemurnian DNA.
+B. Untuk mengubah DNA menjadi sel.
+C. Untuk menghilangkan seluruh komponen sel.
+D. Untuk memperbesar ukuran DNA.
+
+Kunci jawaban: 1-A, 2-B, 3-C, 4-D, 5-A.
+
+Ketentuan:
+- Seluruh soal wajib dijawab.
+- Hitung jumlah benar, salah, dan nilai otomatis.
+- Nilai menggunakan skala 0–100.
+- Simpan hasil setelah tombol Selesaikan Pretest ditekan.
+- Jangan tampilkan kunci jawaban sebelum dikumpulkan.
+
+# 13. POSTTEST
+
+Buat sepuluh soal pilihan ganda berikut.
+
+1. Pada saat jaringan tumbuhan dihancurkan, sampel berubah menjadi bubur. Apa tujuan tahap tersebut dalam isolasi DNA?
+
+A. Memisahkan DNA berdasarkan konsentrasinya.
+B. Membantu membuka struktur jaringan agar komponen sel dapat dilepaskan.
+C. Mengukur kemurnian DNA.
+D. Mengendapkan DNA menggunakan sentrifugasi.
+
+2. Setelah larutan lisis ditambahkan, membran sel mengalami kerusakan. Apa dampaknya terhadap proses isolasi DNA?
+
+A. DNA dapat dilepaskan dari dalam sel.
+B. DNA langsung terukur oleh spektrofotometer.
+C. DNA berubah menjadi protein.
+D. DNA langsung terpisah berdasarkan ukurannya.
+
+3. Seorang praktikan menggunakan kecepatan sentrifugasi yang berbeda dari parameter pada simulasi. Apa yang perlu diperhatikan?
+
+A. Warna tabung setelah digunakan.
+B. Jumlah tombol pada alat.
+C. Pengaruh perubahan kecepatan terhadap pemisahan komponen sampel.
+D. Bentuk luar sentrifugator.
+
+4. Setelah sentrifugasi, terlihat endapan di bagian bawah tabung dan cairan di bagian atas. Pernyataan yang tepat adalah …
+
+A. Seluruh endapan pasti merupakan DNA murni.
+B. Cairan di bagian atas pasti tidak mengandung DNA.
+C. Sentrifugasi telah memperbanyak DNA.
+D. Sampel telah mengalami pemisahan menjadi fraksi yang perlu diidentifikasi sesuai prosedur.
+
+5. Mengapa praktikan harus berhati-hati ketika mengambil supernatan setelah sentrifugasi?
+
+A. Agar tabung berubah warna.
+B. Agar endapan tidak tercampur kembali jika pemisahan fraksi perlu dipertahankan.
+C. Agar DNA dapat diperbanyak.
+D. Agar spektrofotometer bekerja lebih cepat.
+
+6. Ketika menggunakan spektrofotometer, praktikan memperoleh hasil konsentrasi DNA yang berbeda dari percobaan sebelumnya. Apa tindakan yang tepat?
+
+A. Langsung mengubah angka hasil pengukuran.
+B. Memilih hasil yang paling tinggi.
+C. Memeriksa prosedur pengukuran dan kondisi sampel.
+D. Mengabaikan seluruh hasil pengukuran.
+
+7. Mengapa pengukuran kemurnian DNA perlu dilakukan selain pengukuran konsentrasi?
+
+A. Karena konsentrasi dan kemurnian menunjukkan aspek kualitas DNA yang berbeda.
+B. Karena konsentrasi tidak dapat diukur dengan spektrofotometer.
+C. Karena kemurnian menunjukkan jumlah tabung yang digunakan.
+D. Karena DNA murni tidak memiliki konsentrasi.
+
+8. Hasil pengukuran menunjukkan rasio A260/A280 yang jauh dari nilai acuan DNA murni. Apa kemungkinan yang perlu dipertimbangkan?
+
+A. Sentrifugator pasti rusak.
+B. DNA pasti tidak terdapat dalam sampel.
+C. Sampel pasti memiliki konsentrasi tinggi.
+D. Sampel mungkin mengalami kontaminasi atau terdapat gangguan pengukuran.
+
+9. Dua kelompok melakukan isolasi DNA dengan massa jaringan awal yang berbeda. Mengapa konsentrasi DNA yang diperoleh dapat berbeda?
+
+A. Karena semua sampel selalu menghasilkan konsentrasi sama.
+B. Karena massa jaringan awal, efisiensi isolasi, dan kondisi pengukuran dapat memengaruhi hasil.
+C. Karena spektrofotometer mengubah massa jaringan menjadi DNA.
+D. Karena sentrifugasi selalu menghilangkan seluruh DNA.
+
+10. Berdasarkan seluruh tahapan virtual lab, indikator yang paling tepat untuk mengevaluasi keberhasilan isolasi DNA adalah …
+
+A. Banyaknya tombol yang ditekan selama simulasi.
+B. Lamanya praktikan menggunakan komputer.
+C. Hasil pemisahan sampel serta data konsentrasi dan kemurnian DNA.
+D. Warna tampilan antarmuka virtual lab.
+
+Kunci jawaban: 1-B, 2-A, 3-C, 4-D, 5-B, 6-C, 7-A, 8-D, 9-B, 10-C.
+
+Ketentuan:
+- Semua soal wajib dijawab.
+- Hitung jumlah benar, salah, dan nilai otomatis.
+- Simpan hasil setelah pengumpulan.
+- Tampilkan skor setelah posttest selesai.
+
+# 14. HALAMAN AKTIVITAS DAN REKAPITULASI
+
+Buat halaman Aktivitas yang menampilkan:
+
+**A. Identitas**
+- Nama.
+- Kelas.
+- Nomor absen.
+
+**B. Hasil Pretest**
+- Jumlah benar.
+- Jumlah salah.
+- Nilai pretest.
+
+**C. Hasil Praktikum**
+- Massa bawang.
+- Volume ekstraksi.
+- Jumlah penghancuran.
+- Waktu penghancuran.
+- Waktu inkubasi.
+- Kecepatan sentrifugasi.
+- Waktu sentrifugasi.
+- Absorbansi A260.
+- Absorbansi A280.
+- Rasio A260/A280.
+- Konsentrasi DNA.
+- Total DNA.
+- Interpretasi kemurnian DNA.
+
+**D. Hasil Posttest**
+- Jumlah benar.
+- Jumlah salah.
+- Nilai posttest.
+
+**E. Perbandingan Hasil Belajar**
+
+Tampilkan grafik perbandingan nilai pretest dan posttest serta selisih keduanya.
+
+Interpretasi harus mengikuti hasil aktual. Jangan menyatakan peningkatan apabila nilai posttest tidak lebih tinggi.
+
+**F. Status Aktivitas**
+
+- Identitas.
+- Tujuan Pembelajaran.
+- Materi.
+- Pretest.
+- Meja 1.
+- Meja 2.
+- Meja 3.
+- Posttest.
+- Rekap aktivitas.
+
+Sediakan tombol cetak dan unduh laporan.
+
+# 15. SISTEM RESET DAN PENYIMPANAN
+
+Sediakan tombol Reset Praktikum.
+
+Ketika ditekan, tampilkan konfirmasi sebelum mengatur ulang seluruh kondisi praktikum.
+
+Setelah dikonfirmasi:
+
+- Kembalikan ketiga meja ke kondisi awal.
+- Kembalikan semua alat dan bahan ke posisi awal.
+- Hapus hasil sementara.
+- Reset massa dan volume sampel.
+- Reset jumlah tumbukan dan pengadukan.
+- Reset parameter sentrifugasi.
+- Reset hasil spektrofotometri.
+- Izinkan praktikan mengulang praktikum dari Meja 1.
+
+Reset praktikum tidak boleh menghapus identitas, skor pretest, skor posttest, dan progres pembelajaran yang tidak berkaitan dengan praktikum.
+
+Hasil praktikum terbaru yang disimpan harus menggantikan hasil sebelumnya pada halaman Aktivitas.
+
+# 16. PERSYARATAN TEKNIS
+
+Gunakan teknologi pengembangan aplikasi web yang sesuai, seperti:
+
+- HTML.
+- CSS.
+- JavaScript.
+- React.
+- Three.js untuk lingkungan game 3D.
+- Canvas 2D atau teknologi sejenis untuk interaksi praktikum 2D.
+
+**Pembagian teknologi:**
+
+- Lingkungan laboratorium awal menggunakan 3D.
+- Karakter praktikan menggunakan model 3D.
+- Pergerakan karakter menggunakan kontrol laptop dan HP.
+- Ketika meja dipilih, masuk ke lingkungan praktikum 2D.
+- Seluruh alat praktikum 2D memiliki fungsi interaktif.
+- Gunakan sistem drag-and-drop, animasi, dan perubahan visual sampel.
+- Simpan progres pembelajaran dan data praktikum secara konsisten.
+
+Pastikan aplikasi dapat dijalankan melalui browser dan responsif pada laptop maupun HP.
+
+# 17. KRITERIA AKHIR APLIKASI
+
+Hasil akhir harus berupa game virtual lab yang benar-benar dapat dimainkan.
+
+Urutan pengalaman pengguna:
+
+1. Praktikan membuka aplikasi dan melihat lingkungan laboratorium 3D.
+2. Praktikan berdiri di tengah ruangan.
+3. Praktikan melihat tiga meja praktikum di sekelilingnya.
+4. Praktikan berjalan menuju Meja 1.
+5. Praktikan menekan tombol Mulai Praktikum.
+6. Tampilan berubah menjadi praktikum 2D untuk memotong, menimbang, menumbuk, mengekstraksi, dan menyaring bawang bombai.
+7. Setelah Meja 1 selesai, praktikan kembali ke lingkungan 3D.
+8. Praktikan berjalan menuju Meja 2.
+9. Praktikan melakukan pengisian tabung, penambahan etanol, sentrifugasi, pengamatan pelet dan supernatan, serta pemisahan fraksi DNA dan penambahan buffer TE.
+10. Setelah Meja 2 selesai, praktikan kembali ke lingkungan 3D.
+11. Praktikan berjalan menuju Meja 3.
+12. Praktikan melakukan pengukuran blanko dan sampel DNA menggunakan spektrofotometer UV-Vis.
+13. Hasil pengukuran ditampilkan secara otomatis.
+14. Praktikan menyelesaikan praktikum dan melihat rekapitulasi hasil.
+15. Praktikan mengerjakan posttest dan melihat perbandingan hasil pembelajaran.
+
+**PRIORITAS UTAMA:**
+
+Buat pengalaman bermain seperti game simulasi laboratorium sungguhan. Tampilan awal harus benar-benar berupa lingkungan 3D dengan tiga meja dan seorang praktikan di tengah. Setiap meja menjadi lokasi praktikum tersendiri yang dapat dikunjungi dengan berjalan.
+
+Ketika praktikan memilih meja, tampilkan laboratorium 2D dengan alat realistis berukuran besar, tersusun rapi, dan dapat dioperasikan secara langsung.
+
+Jangan membuat ketiga meja hanya sebagai menu gambar. Jangan membuat praktikan hanya sebagai karakter dekoratif. Pergerakan, penguncian meja, perpindahan tampilan 3D ke 2D, penggunaan alat, perubahan sampel, pengukuran, dan penyimpanan hasil harus benar-benar berfungsi.
+
+Hasil akhirnya harus terasa seperti **game simulasi praktikum Biologi yang menggabungkan eksplorasi laboratorium 3D dan eksperimen laboratorium 2D interaktif.**
